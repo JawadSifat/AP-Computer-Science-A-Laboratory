@@ -100,7 +100,7 @@ public class ImageClassifier {
                 failure++;
                 numbers[currentTestingLabel]++;
                 //testingPicture.show();
-                //StdOut.println(trainingFileNames.get(i));
+                StdOut.println(trainingFileNames.get(i));
             }
         }
 
