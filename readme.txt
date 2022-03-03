@@ -1,6 +1,6 @@
 Programming Assignment: Image Classifier
 
-Jamie and Stanley
+Names: Jamie and Stanley
 
 /**********************************************************************
  * Approximate number of hours to complete this assignment            *
