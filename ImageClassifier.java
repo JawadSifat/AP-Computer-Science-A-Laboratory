@@ -1,3 +1,35 @@
+/** *****************************************************************************                                                                                                                 
+ *  Name:        Jamie  and Stanley                                                                                                                                                     
+ *  DOE Name:    Jawad Sifat and Stanley Zheng                                                                                                                                   
+ *                                                                                                                                                                                                
+ *  Title:  Image Classifer Part I
+ *
+ *  Description:  Using a prebuilt MultiPerceptron class, create a image classifier client to
+ *                  train and test on images. 
+ *
+ *  Written:            3/1/2022
+ *  Last updated:       3/3/2022
+ *  Assignment Due:     3/3/2022
+ *
+ *  Compilation:   javac -classpath .:stdlib.jar ImageClassifier.java
+ *  Execution:     java -classpath .:stdlib.jar ImageClassifier [TrainingFile].txt [TestingFile].txt
+ *  
+ *  Expectation: Prints to standard output the names of the files that were misclassified and the total 
+ *                  error rate of the simulation and the digits by order of misclassification (ordered by index).
+ * 
+ *   Example: 
+ *   digits/training/6/13.png
+ *   digits/training/1/72.png
+ *   digits/training/5/35.png
+ *   digits/training/7/52.png
+ *   digits/training/5/0.png
+ *   digits/training/6/39.png
+ *   digits/training/4/61.png
+ *   digits/training/7/91.png
+ *   Test Error Rate: 0.800000 
+ *   Digits by order of misclassification: [0, 3, 0, 0, 0, 0, 0, 3, 0, 2] 
+ *********************************************************************************** */
+
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -106,6 +138,6 @@ public class ImageClassifier {
 
 
         StdOut.printf("Test Error Rate: %f %n", (1.0 * failure) / (success + failure));
-        StdOut.printf("Digits by order of misclassification: %s", Arrays.toString(numbers));
+        StdOut.printf("Digits by order of misclassification: %s %n", Arrays.toString(numbers));
         }
 }
