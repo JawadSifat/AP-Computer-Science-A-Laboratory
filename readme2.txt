@@ -1,6 +1,6 @@
 Programming Assignment: Perceptron
-Jawad Sifat and Stanley Zheng
 
+Names: Stanley and Jamie
 /**********************************************************************
  * Approximate number of hours to complete this assignment            *
  **********************************************************************/
@@ -12,6 +12,13 @@ Number of hours: 1.5 hours
  * List your instance variables and the comments you had for each:    *
  **********************************************************************/
 
+For Perceptron:
+private int n; // n inputs
+private double[] weights; //array with n inputs
+
+For MultiPerceptron:
+private int m,n; // m classes, n inputs
+private Perceptron[] perceptrons; //array with m perceptrons, each perceptron initialized with n inputs
 
 /**********************************************************************
  * Analysis:                                                          *
