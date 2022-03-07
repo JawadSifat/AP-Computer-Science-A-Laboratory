@@ -1,4 +1,32 @@
+/** *****************************************************************************                                                                                                                 
+ *  Name:        Jamie  and Stanley                                                                                                                                                     
+ *  DOE Name:    Jawad Sifat and Stanley Zheng                                                                                                                                   
+ *                                                                                                                                                                                                
+ *  Title:  Perceptron Object class
+ *
+ *  Description:  Builds a perceptron data type that can train itself on data. 
+ *
+ *  Written:            3/3/2022
+ *  Last updated:       3/7/2022
+ *  Assignment Due:     3/8/2022
+ *
+ *  Compilation:   javac -classpath .:stdlib.jar Perceptron.java
+ *  Execution:     java -classpath  .:stdlib.jar Perceptron 
+ *  
+ *  Expectation: Trains itself by going through the weighted sum of arrays. 
+ * 
+ * Example Run:
+ * java -classpath .:stdlib.jar Perceptron
+ * (0.0, 0.0, 0.0)
+ * (5.0, -4.0, 3.0)
+ * (5.0, -4.0, 3.0)
+ * (5.0, -4.0, 3.0)
+ * (11.0, 1.0, -4.0)
+ *********************************************************************************** */
+
+
 import java.util.Arrays;
+
 public class Perceptron {
 	private int n;
 	private double[] weights;
@@ -51,15 +79,24 @@ public class Perceptron {
 
     // Tests this class by directly calling all instance methods.   
     public static void main(String[] args) {
-    	
-    	Perceptron test = new Perceptron(3);
-    	System.out.println("number of inputs: " + test.numberOfInputs());
-    	double[] x = {5,-4,3};
-    	System.out.println("weighted sum: " + test.weightedSum(x));
-    	System.out.println("predict: " + test.predict(x));
-    	System.out.println(test);
-    	test.train(x,1);
-    	System.out.println(test);
+        int n = 3;
+
+        double[] training1 = {  5.0, -4.0,  3.0 };  // yes
+        double[] training2 = {  2.0,  3.0, -2.0 };  // no
+        double[] training3 = {  4.0,  3.0,  2.0 };  // yes
+        double[] training4 = { -6.0, -5.0,  7.0 };  // no
+
+        Perceptron perceptron = new Perceptron(n);
+        StdOut.println(perceptron);
+        perceptron.train(training1, +1);
+        StdOut.println(perceptron);
+        perceptron.train(training2, -1);
+        StdOut.println(perceptron);
+        perceptron.train(training3, +1);
+        StdOut.println(perceptron);
+        perceptron.train(training4, -1);
+        StdOut.println(perceptron);
+
     }
 
 }
