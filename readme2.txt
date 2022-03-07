@@ -1,5 +1,5 @@
 Programming Assignment: Perceptron
-
+Jawad Sifat and Stanley Zheng
 
 /**********************************************************************
  * Approximate number of hours to complete this assignment            *
