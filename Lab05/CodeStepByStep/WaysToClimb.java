@@ -10,8 +10,15 @@ public class WaysToClimb {
 
 	public static void waysToClimb(int n){
 		ArrayList<Integer> out = new ArrayList<Integer>();
-		StdOut.println(waysToClimbHelper(n, out));
+		out = waysToClimbHelper(n, out);
+		waysToClimbEditor(n, out);
 	}
+
+	public static void waysToClimbEditor(int n, ArrayList<Integer> out){
+		
+
+	}
+
 
 	public static void main(String[] args){
 		int n = StdIn.readInt();
