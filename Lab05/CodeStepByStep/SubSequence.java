@@ -34,15 +34,22 @@ public class SubSequence {
 	}
 
 	public static boolean isSubsequence(String first, String second){
-		
+		if (second.length() == 0) { return true; }
+		if (first.length() == 0) { return false; }
+		if (first.charAt(0) == second.charAt(0)){
+			second = second.substring(1);
+			first  = first.substring(1);
+			return isSubsequence(first, second);
+		}
+		return isSubsequence(first.substring(1), second);
 	}
 
 	public static void main(String[] args){
 		String first  = args[0];
 		String second = args[1];
 
-		StdOut.printf("First word is %s, the subword is supposed to be %s %n The program checks that this is [%b]. %nplease verify this yourself%n", first, second, isSubsequenceConsecutive(first, second));
-
+		//StdOut.printf("First word is %s, the subword is supposed to be %s %n The program checks that this is [%b]. %nplease verify this yourself%n", first, second, isSubsequenceConsecutive(first, second));
+		StdOut.printf("First word is %s, the subword is supposed to be %s %n The program checks that this is [%b]. %nplease verify this yourself%n", first, second, isSubsequence(first, second));
 
 	}
 }
