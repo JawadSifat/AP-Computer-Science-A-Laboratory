@@ -43,7 +43,7 @@ public class RevesPuzzle{
 	int k = findK(n);
 	//A = 1, B = 2, C = 3, D = 4
 	helper(k, 1, 2, spare(start, end));
-	helper(n, 1, 4, spare(start, end));
+	helper(n - k, 1, 4, spare(start, end));
 	helper(k, 2, 4, spare(start, end));
     }
 }
