@@ -5,30 +5,33 @@
  *  Dependencies: 
  *
  *  % java RevesPuzzle n
+ * 
+ *  $ java RevesPuzzle 3
+ *    move disc 1 from A to B
+ *    move disc 2 from A to C
+ *    move disc 3 from A to D
+ *    move disc 2 from C to D
+ *    move disc 1 from B to D
  *
  ******************************************************************************/
-//Not tested yet
 public class RevesPuzzle{
     public static int findK(int n){
 	return n + 1 - (int) Math.pow(2 * n + 1, 0.5);
     }
     
-    public static void helper(int disks, int start, int end, iint spare){
+    public static void helper(int disks, int start, int end, int spare1, int spare2){
+    if(disks <= 0) return;
 	if (disks == 1) {
         	System.out.println("move disk " + disks + " from peg " + letter(start) + " to peg " + letter(end));
         	return;
 	}
-    	helper(disks - 1, start, spare(start, end), end);
-    	System.out.println("move disk " + disks + " from peg " + letter(start) + " to peg " + letter(end));
-    	helper(disks - 1, spare(start, end), end, start);
+    if(disks > 1){
+    	helper(disks - 2, start, spare1, end, spare2);
+        System.out.println("move disc " + (disks - 1) + " from peg " + letter(start) + " to peg " + letter(spare2));
+        System.out.println("move disc " + disks + " from peg " + letter(start) + " to peg " + letter(end));
+        System.out.println("move disc " + (disks - 1) + " from peg " + letter(spare2) + " to peg " + letter(end));
+    	helper(disks - 2, spare1, end, spare2, start);
     }
-
-
-    public static int spare(int start, int end){
-	if (start != 1 && end != 1) return 1;
-	if (start != 2 && end != 2) return 2;
-	if (start != 3 && end != 3) return 3;
-    	return 4;
     }
 	
     public static String letter(int num){
@@ -42,8 +45,6 @@ public class RevesPuzzle{
 	int n = Integer.parseInt(args[0]);
 	int k = findK(n);
 	//A = 1, B = 2, C = 3, D = 4
-	helper(k, 1, 2, spare(start, end));
-	helper(n - k, 1, 4, spare(start, end));
-	helper(k, 2, 4, spare(start, end));
+	helper(n, 1, 4, 2, 3);
     }
 }
