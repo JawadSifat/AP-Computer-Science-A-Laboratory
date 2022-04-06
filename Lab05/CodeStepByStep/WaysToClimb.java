@@ -2,21 +2,28 @@ import java.util.ArrayList;
 
 public class WaysToClimb {
 
-	public static ArrayList<Integer> waysToClimbHelper(int n, ArrayList<Integer> out){
-		if (n == 1) { out.add(1); return out;}
-		out.add(1);
-		return waysToClimbHelper(n-1, out);
+	public static void waysToClimb(int s, ArrayList<Integer> temp){
+    		if(s < 0){
+        		return;}
+    		if(s == 0 && !temp.isEmpty()){
+        		System.out.println(temp);
+        		return;
+    			}
+    
+    		if (s > 0) {
+        		temp.add(1);
+        		waysToClimb(s - 1, temp);
+        		temp.remove(temp.size() - 1);
+        
+        		temp.add(2);
+        		waysToClimb(s - 2, temp);
+        		temp.remove(temp.size() - 1);
+    		}
 	}
 
-	public static void waysToClimb(int n){
-		ArrayList<Integer> out = new ArrayList<Integer>();
-		out = waysToClimbHelper(n, out);
-		waysToClimbEditor(n, out);
-	}
-
-	public static void waysToClimbEditor(int n, ArrayList<Integer> out){
-		
-
+	public static void waysToClimb(int stairs){
+    		ArrayList<Integer> temp = new ArrayList<Integer>();
+   	 	waysToClimb(stairs, temp);
 	}
 
 
