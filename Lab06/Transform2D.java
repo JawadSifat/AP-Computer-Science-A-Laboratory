@@ -21,10 +21,24 @@ public class Transform2D {
     }
 
     // Translates the polygon by (dx, dy).
-    public static void translate(double[] x, double[] y, double dx, double dy){}
+    public static void translate(double[] x, double[] y, double dx, double dy){
+    	for (int i = 0; i < x.length; i++){
+    		x[i] += dx;
+    		y[i] += dy;
+    	}
+    	return;
+    }
 
     // Rotates the polygon theta degrees counterclockwise, about the origin.
-    public static void rotate(double[] x, double[] y, double theta){}
+    public static void rotate(double[] x, double[] y, double theta){
+    	theta = Math.toRadians(theta);
+    	for (int i = 0; i < x.length; i++){
+    		double temp = x[i];
+    		x[i] = x[i] * Math.cos(theta) - y[i] * Math.sin(theta);
+    		y[i] = temp * Math.sin(theta) - y[i] * Math.cos(theta);
+    	}
+    	return;
+    }
 
     // Tests each of the API methods by directly calling them.
     public static void main(String[] args) {
