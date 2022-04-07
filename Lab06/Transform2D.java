@@ -65,7 +65,7 @@ import java.util.Arrays;
     }
 
     // Rotates the polygon theta degrees counterclockwise, about the origin.
-    public static void rotate(double[] x, double[] y, double theta){
+    public static void rotateRectangular(double[] x, double[] y, double theta){
     	theta = Math.toRadians(theta);
     	for (int i = 0; i < x.length; i++){
     		double temp = x[i];
@@ -75,7 +75,7 @@ import java.util.Arrays;
     	return;
     }
 
-    public static void rotatePolar(double[] x, double[] y, double theta){
+    public static void rotate(double[] x, double[] y, double theta){
     	theta = Math.toRadians(theta);
     	for (int i = 0; i < x.length; i++){
     		if (x[i] == 0 && y[i] == 0) { continue; } 
@@ -117,7 +117,7 @@ import java.util.Arrays;
 	double rotateBy = 45.0;
 	double tX 		= 1.0;
 	double tY 		= 2.0;
-	rotatePolar(cx, cy, rotateBy);
+	rotate(cx, cy, rotateBy);
 	translate(cx, cy, tX, tY);
 	StdOut.printf("After a rotation of %.1f degrees and translation of %.1fX and %.1fY%n, the coordinates of c are %nX: %s &%n Y: %s %n%n", rotateBy, tX, tY, Arrays.toString(cx), Arrays.toString(cy));
 	double scale = 2.0;
