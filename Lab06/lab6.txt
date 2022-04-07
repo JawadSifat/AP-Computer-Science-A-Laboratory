@@ -1,0 +1,29 @@
+Background material (Lecture)
+=============================================================================
+   watch  : recursion-graphics.mp4
+
+
+
+
+
+
+
+
+        Princeton Assignment : Recursive Graphics
+============================================================================
+
+ https://www.cs.princeton.edu/courses/archive/spring21/cos126/assignments.html
+
+
+ Part I and II: Geometric Transformation Library and Sierpinski Triangle
+                is group work. Work with your partner from Lab-5.
+
+ 
+
+ Part III: Create your own Art (Individual Assignment)
+
+
+
+ Submit as a group: Transform2D.java, Sierpinski.java,
+
+        as an idividual: Art.java and readme.txt
