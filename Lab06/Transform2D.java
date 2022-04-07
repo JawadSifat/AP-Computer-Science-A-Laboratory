@@ -5,13 +5,20 @@ public class Transform2D {
     public static double[] copy(double[] array){
 	double[] temp = new double[array.length];
 	for(int i = 0; i < array.length; i++){
-	    temp[0] = array[0];
+	    temp[i] = array[i];
 	}
 	return temp;
     }
 
     // Scales the polygon by the factor alpha.
-    public static void scale(double[] x, double[] y, double alpha){}
+    public static void scale(double[] x, double[] y, double alpha){
+	for(int i = 0; i < x.length; i++){
+	    x[i] = x[i] * alpha;
+	}
+	for(int j = 0; j < y.length; j++){
+	    y[j] = y[j] * alpha;
+	}
+    }
 
     // Translates the polygon by (dx, dy).
     public static void translate(double[] x, double[] y, double dx, double dy){}
