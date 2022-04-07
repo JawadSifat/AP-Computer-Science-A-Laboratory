@@ -42,6 +42,7 @@ public class Transform2D {
 	// Rotate and translate the copy
 	rotate(cx, cy, -45.0);
 	translate(cx, cy, 1.0, 2.0);
+	scale(cx, cy, 2.0);
 
 	// Draw the copy in blue
 	StdDraw.setPenColor(StdDraw.BLUE);
