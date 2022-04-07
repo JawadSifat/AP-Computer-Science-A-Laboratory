@@ -3,8 +3,12 @@ public class Transform2D {
     // Returns a new array object that is an exact copy of the given array.
     // The given array is not mutated.
     public static double[] copy(double[] array){
-	return array
-	    }
+	double[] temp = new double[array.length];
+	for(int i = 0; i < array.length; i++){
+	    temp[0] = array[0];
+	}
+	return temp;
+    }
 
     // Scales the polygon by the factor alpha.
     public static void scale(double[] x, double[] y, double alpha){}
