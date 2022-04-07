@@ -1,0 +1,21 @@
+A window opened to display the computer generated drawing, the panel has scale (-15.0 && 15.0)
+
+
+The double array of x coords given is [0.0, 1.0, 1.0, 0.0]
+
+The double array of y coords given is [0.0, 0.0, 2.0, 1.0]
+
+The double array cx copied the x coordinates of the double array x, the equality is true
+ [0.0, 1.0, 1.0, 0.0] 
+ The double array cy copied the y coordinates of the double array y, the equality is true
+ [0.0, 0.0, 2.0, 1.0] 
+After a rotation of 45.0 degrees and translation of 1.0X and 2.0Y
+, the coordinates of c are 
+X: [1.0, 1.7071067811865475, 0.29289321881345265, 0.29289321881345254] &
+ Y: [2.0, 2.7071067811865475, 4.121320343559643, 2.7071067811865475] 
+
+We then dilate the polygon by a scale factor of 2.000000 which transforms the coordinates to 
+ X: [2.0, 3.414213562373095, 0.5857864376269053, 0.5857864376269051] & 
+ Y: [4.0, 5.414213562373095, 8.242640687119286, 5.414213562373095] 
+
+ 
