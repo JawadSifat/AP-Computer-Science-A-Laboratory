@@ -1,6 +1,3 @@
-# AP-Computer-Science-A-Laboratory
-Files for CS Lab
-
 /** ****************************************************************************************************************|                                                                                                                
  *  Name:        Jamie                                                                                                                                                              
  *  DOE Name:    Jawad Sifat (OSIS: 215938200)                                                                                                                                    
