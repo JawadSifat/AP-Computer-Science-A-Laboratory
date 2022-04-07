@@ -1,5 +1,28 @@
-public class Transform2D {
+/** ****************************************************************************************************************|                                                                                                                
+ *  Name:        Jamie && Reiko                                                                                                                                                            
+ *  DOE Name:    Jawad Sifat && Reiko Chen                                                                                                                                    
+ *                                                                                                                                                                                                
+ *  Title:  Transform2D LAB 6 PART I
+ *
+ *  Description:  This is the code for Transform 2D which allows us to manipulate polygons through a set of transformation
+ * 					functions. 
+ * 
+ *  Written:       4/6/2022
+ *  Last updated:  4/7/2022
+ *
+ *  Compilation:   javac -classpath .:stdlib.jar Transform2D.java
+ *  Execution:     java  -classpath .:stdlib.jar Transform2D
+ * 
+ * 
+ *  Dependencies/Packages Imported: Princeton Standard Libraries (stdlib.jar)
+ |******************************************************************************************************************/
+ public class Transform2D {
 
+	 /***********************************|
+     * 
+     * I. TRANSFORMATION FUNCTIONS
+     * 
+     | **********************************/
     // Returns a new array object that is an exact copy of the given array.
     // The given array is not mutated.
     public static double[] copy(double[] array){
@@ -40,6 +63,11 @@ public class Transform2D {
     	return;
     }
 
+     /***********************************|
+     * 
+     * II. MAIN CLIENT
+     * 
+     | **********************************/
     // Tests each of the API methods by directly calling them.
     public static void main(String[] args) {
 	// Set the x- and y-scale
@@ -66,4 +94,10 @@ public class Transform2D {
 	StdDraw.setPenColor(StdDraw.RED);
 	StdDraw.polygon(x, y);
     }
+
+/**************************************************************************************************************************************|
+* 
+* III. END OF FILE
+* 
+| **************************************************************************************************************************************/
 }
