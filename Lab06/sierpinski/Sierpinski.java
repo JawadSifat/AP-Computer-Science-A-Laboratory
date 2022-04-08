@@ -8,8 +8,15 @@ public class Sierpinski {
     // Draws a filled equilateral triangle with the specified side length
     // whose bottom vertex is (x, y).
     public static void filledTriangle(double x, double y, double length){
-	double[] a = {x, x - (height(length) / 2.0), x + (height(length) / 2.0)};
-	double[] b = {y, y + height(length), y + height(length)};
+    	//top right
+    	double x1 = x - (length / 2.0);
+    	double y1 = y + height(length);
+    	//top left
+    	double x2 = x + (length / 2.0);
+    	double y2 = y + height(length);
+
+	double[] a = {x, x1, x2};
+	double[] b = {y, y1, y2};
 	StdDraw.filledPolygon(a, b);
     }
 
