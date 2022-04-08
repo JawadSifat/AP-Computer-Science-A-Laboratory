@@ -23,26 +23,22 @@ public class Sierpinski {
     // Draws a Sierpinski triangle of order n, such that the largest filled
     // triangle has the specified side length and bottom vertex (x, y).
     public static void sierpinski(int n, double x, double y, double length){
-	    if (n == 0)
+	if (n == 0)
 	    return;
-	filledTriangle(x, y, length);
+	    filledTriangle(x, y, length);
 
-    double x0 = x / 2.0;
-    double y0 = y;
+    	double x0 = x - (length / 2.0);
+    	double y0 = y;
 
-    System.out.println(x0 + " " + y0);
-
-    double x1 = x * 1.5;
-    double y1 = y;
-    System.out.println(x0 + " " + y0);
+    	double x1 = x + (length / 2.0);
+    	double y1 = y;
     
-    double x2 = x;
-    double y2 = height(length);
-    System.out.println(x0 + " " + y0);
+    	double x2 = x;
+    	double y2 = y + Math.sqrt(3) / 2.0 * length;
 
 	sierpinski(n - 1, x0, y0, length / 2.0);  //left
-    sierpinski(n - 1, x1, y1, length / 2.0);  //right
-    sierpinski(n - 1, x2, y2, length / 2.0);  //top
+    	sierpinski(n - 1, x1, y1, length / 2.0);  //right
+    	sierpinski(n - 1, x2, y2, length / 2.0);  //top
     }
 
     // Takes an integer command-line argument n;
