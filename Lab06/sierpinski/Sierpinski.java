@@ -1,3 +1,20 @@
+/** ****************************************************************************************************************|                                                                                                                
+ *  Name:        Jamie && Reiko                                                                                                                                                            
+ *  DOE Name:    Jawad Sifat && Reiko Chen                                                                                                                                    
+ *                                                                                                                                                                                                
+ *  Title:  Sierpinski LAB 6 PART I
+ *
+ *  Description: Recursive java file to create a Sierpinski triangle.
+ * 
+ *  Written:       4/7/2022
+ *  Last updated:  4/8/2022
+ *
+ *  Compilation:   javac -classpath .:stdlib.jar Sierpinski.java
+ *  Execution:     java  -classpath .:stdlib.jar Sierpinski
+ * 
+ *  Dependencies/Packages Imported: Princeton Standard Libraries (stdlib.jar)
+ |******************************************************************************************************************/
+
 public class Sierpinski {
 
     // Height of an equilateral triangle with the specified side length.
@@ -36,7 +53,7 @@ public class Sierpinski {
     	double x2 = x;
     	double y2 = y + Math.sqrt(3) / 2.0 * length;
 
-	sierpinski(n - 1, x0, y0, length / 2.0);  //left
+	    sierpinski(n - 1, x0, y0, length / 2.0);  //left
     	sierpinski(n - 1, x1, y1, length / 2.0);  //right
     	sierpinski(n - 1, x2, y2, length / 2.0);  //top
     }
