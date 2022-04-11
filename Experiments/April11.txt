@@ -1,3 +1,8 @@
+APRIL 11th 2022
+
+Art.java due Wednesday
+Test 4/29 on Recursion
+
 Topic : Dynamic Programming
 
 - Used to avoid excessive recursive calls
@@ -54,6 +59,20 @@ public static long fibonacciTDP(int n){
 	f[n] = fibonacciTDP(n - 1) + fibonacciTDP(n - 2);
 	return f[n];
 }
+
+
+ALTERNATIVE APPROACH - BOTTOM UP PROGRAMMING
+public static long fibonacciBUDP(int n){
+	long[] f = new long[n + 1];
+	f[0] = 0;
+	f[1] = 1;
+	for (int i = 2; i <= n, i++){
+		f[i] = f[i - 1] + f[i - 2];
+	}
+	return f[n];
+}
+
+
 
 
 
