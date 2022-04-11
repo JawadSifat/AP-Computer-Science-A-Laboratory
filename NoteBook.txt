@@ -1,0 +1,59 @@
+Topic : Dynamic Programming
+
+- Used to avoid excessive recursive calls
+
+//Long inefficient code
+public static long fibonacci(int n){
+	if (n == 0) return 0;
+	if (n == 1) return 1;
+	return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+fb(5) -> 
+
+Col 1:
+fb(4) + fb(3)
+
+Col 1a: 
+fb(3) + fb(2)
+
+col 1aa:
+fb(2) + fb(1)
+
+col 1aaa:
+fb(1) + fb(0)
+
+resolve 1aa and 1aaa
+1 + 0 + 1 = 2
+
+col 1a:
+2 + fb(2)
+
+col 2b:
+fb(0) fb(1)
+
+resolve col 1a
+3
+
+resolve fb(3) -> 2
+
+resolve fb(5)
+5
+
+
+BETTER APPROACH - TOP DOWN PROGRAMMING
+
+private static long[] f = new long(92);
+
+public static long fibonacciTDP(int n){
+	if (n == 0) return 0;
+	if (n == 1) return 1;
+
+	if (f[n] > 0) return f[n];
+
+	f[n] = fibonacciTDP(n - 1) + fibonacciTDP(n - 2);
+	return f[n];
+}
+
+
+
