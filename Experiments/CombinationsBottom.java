@@ -1,26 +1,25 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class CombinationsBottom {
 
+	private static long factorial(long x){
+		if (x == 1) return 1;
+		return x * factorial(x - 1);
+	}
 
 	public static long combin(int n, int k){
 		if (k == 0 || k == n) return 1;
 		if (n <= 0 || k < 0 || k > n) return 0;
-		long[] c = new long[n + 1];
-		c[0] = 1; 
-		c[1] = 2;
-		for (int i = 2; i <= c.length; i++){
-			c[i] = 2 + ( 2 * (c[i - 1] + c[i - 2]) );
-			System.out.println(Arrays.toString(c));
-		}
-		return c[k];
-
+		ArrayList<Long> out = new ArrayList<Long>();
+		return (factorial(n)) / (factorial(n - k) * factorial(k));
 	}
 
 	public static void main(String[] args){
 		int n = Integer.parseInt(args[0]);
 		int k = Integer.parseInt(args[1]);
 
+		System.out.println(factorial(n) + " AND " + factorial(k));
 		System.out.println(combin(n, k));
 	}
 }

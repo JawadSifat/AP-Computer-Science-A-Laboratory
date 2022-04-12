@@ -73,11 +73,26 @@ public static long fibonacciBUDP(int n){
 }
 
 
-1
-1 1
-1 2 1
-1 3 3 1
-1 4 6 4 1
+Combin
+
+Recurrence Relation: 
+(n, k) = {(n - 1, k - 1) + (n - 1, k)} when 0 < k < n otherwise 1
+
+public static long combin(int n, int k){
+	if (k == 0 || k == n) { return 1; }
+	if (k <= 0 || k < 0 || k > n) { return 0; }
+	long[][] pascal = new long[n + 1][n + 1];		// Creates a square double array that represents the numbers of pascal's triangle
+	pascal[0][0] = 1;								// Base Pascal
+	for (int i = 1; i <= n; i++){
+		for (int j = 0; j <= i; j++){
+			if (j == 0 || j == i) { pascal[i][j] = 1; }
+			else { pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j]; } // Recurrence relationship
+		}
+	}
+	return pascal[n][k];
+}
+
+
 
 
 
