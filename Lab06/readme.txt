@@ -9,7 +9,7 @@ PARTNER'S NAME) ANYWHERE IN THIS SUBMISSION.
  * Approximate number of hours to complete this assignment            *
  **********************************************************************/
 
-Number of hours:
+Number of hours: 3
 
 
 
@@ -19,6 +19,10 @@ Number of hours:
  *  from somewhere (like our book, the booksite, or another offline or
  *  online source) cite it here. 
  **********************************************************************/
+ My artistic creation was my goal of representing pure abstract off-key chaos.
+ I wanted the program to be random each time you run it but still have discernable patterns
+ in it. When the recursion ends I wrote Caesar's refrain in a random position, just a pure
+ arthouse thing. 
 
 
 
@@ -28,8 +32,8 @@ Number of hours:
  **********************************************************************/
 
  1. public static void main(String[] args)
- 2. 
- 3. 
+ 2. private static void drawJava(double[] x, double[] y){
+ 3. private static void drawMain(int iterations, double[] x, double[] y){
 
 
 
@@ -41,14 +45,14 @@ Number of hours:
  *     [X] this is a checked criteria
  **********************************************************************/
  
-    [ ] call one or more Transform2D method
+    [ X ] call one or more Transform2D method
 
     [ ] use different parameters than our examples: f(n, x, y, size)
 
-    [ ] use different StdDraw methods than in examples (e.g.,
+    [X ] use different StdDraw methods than in examples (e.g.,
         ellipses, arcs, text)
 
-    [ ] number of recursive calls not constant per level (e.g.,
+    [X ] number of recursive calls not constant per level (e.g.,
         conditional recursion)
 
     [ ] mutually recursive methods
@@ -57,10 +61,10 @@ Number of hours:
 
     [ ] doesn't always recur from level n to level n-1
 
-    [ ] draw between recursive calls, not just before/after all
+    [ X ] draw between recursive calls, not just before/after all
         recursive calls
 
-    [ ] use recursive level for secondary purpose (e.g., level
+    [ X ] use recursive level for secondary purpose (e.g., level
         dictates color)
 
 
@@ -69,7 +73,7 @@ Number of hours:
  *  shared (anonymously) with the rest of the class.
  **********************************************************************/
 
-    [ ] I do *NOT* want my art to be shared with the class
+    [ X ] I do *NOT* want my art to be shared with the class
 
 
 /**********************************************************************
@@ -78,7 +82,7 @@ Number of hours:
  *  or "Office hours on Thursday" is ok if you don't know their name.)
  **********************************************************************/
 
-Yes or no?
+no.
 
 
 
@@ -87,7 +91,7 @@ Yes or no?
  *  Did you encounter any serious problems? If so, please describe.
  **********************************************************************/
 
-Yes or no?
+no.
 
 
 
@@ -95,5 +99,5 @@ Yes or no?
 /**********************************************************************
  *  List any other comments here.                                     
  **********************************************************************/
-
+¡Vení, ví, Vencí!
 

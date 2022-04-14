@@ -5,6 +5,7 @@ public class Catalan {
 	public static long catalanNumberHelper(int n, long prev){
 		long out = (2 * ((2 * n) + 1)) / (n + 2);
 		out  	 = out * prev;
+		return out;
 	}
 
 	public static void catalanPrint(long[] array){
@@ -21,8 +22,8 @@ public class Catalan {
 		sequence[0] = 1;
 		for (int i = 1; i <= k; i++){
 			StdOut.printf("Going to calculate C_%d sub %d + 1%n", i, sequence[i - 1]);
-			StdOut.printf("CatalanCalc")
-			sequence[i] = catalanNumberHelper(i - 1) * sequence[(i - 1)];		// i = n + 1 
+			StdOut.printf("CatalanCalc: %d and %d is %d%n", i-1, i, catalanNumberHelper(i-1, i + 1));
+			sequence[i] = catalanNumberHelper(i - 1, i + 1);		// i = n + 1 
 			catalanPrint(sequence);
 		}
 		catalanPrint(sequence);

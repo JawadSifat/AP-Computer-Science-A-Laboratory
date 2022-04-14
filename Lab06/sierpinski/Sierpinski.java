@@ -63,10 +63,11 @@ public class Sierpinski {
     // whose bottom-left vertex is (0, 0) and bottom-right vertex is (1, 0);
     // and draws a Sierpinski triangle of order n that fits inside the outline.
     public static void main(String[] args){
+    StdDraw.setScale(-2.0, 2.0);
 	int n = Integer.parseInt(args[0]);
 	double[] ufx = {0, 0.5, 1};
 	double[] ufy = {0, (Math.sqrt(3) / 2.0),0};
 	StdDraw.polygon(ufx, ufy);
-	sierpinski(n);
+	sierpinski(n, 1, 1, 0.5);
     }
 }
