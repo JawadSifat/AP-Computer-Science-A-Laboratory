@@ -1,3 +1,20 @@
+/*************************************************************************
+ * Name                       : Jamie S. 
+ * Date Created               : June 4 2022
+ * Date Last Updated          : June 4 2022
+ * Compilation                : javac GuitarHero.java
+ * Execution                  : java  GuitarHero
+ * Expected Location          : /GuitarHero.java
+ * 
+ * 
+ * Purpose: A GuitarHero object that represents 37 guitarstrings in a row with 
+ *          keyboard
+ * 
+ * 
+ *****************************************************************************/
+
+
+
 public class GuitarHero {
 
 	private String keyboard        = "q2we4r5ty7u8i9op-[=zxdcfvgbnjmk,.;/' ";

@@ -1,12 +1,15 @@
 /*************************************************************************
  * Name                       : Jamie S. 
- * Date Created               : June 2nd 2022
- * Date Last Updated          : June 2nd 2022
+ * Date Created               : June 2 2022
+ * Date Last Updated          : June 4 2022
  * Compilation                : javac RingBuffer.java
  * Execution                  : java  RingBuffer
  * Expected Location          : /RingBuffer.java
  * 
- * Expected Runtime Output    : Shown in ringRuntime.txt 
+ * 
+ * Purpose: A RingBuffer datatype 
+ *
+ * Expected runtime output     : /ringbufferoutput.txt 
  * 
  *****************************************************************************/
 import java.util.Arrays;          // Used to print Arrays to Standard Output

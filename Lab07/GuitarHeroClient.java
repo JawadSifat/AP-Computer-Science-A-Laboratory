@@ -1,3 +1,18 @@
+/*************************************************************************
+ * Name                       : Jamie S. 
+ * Date Created               : June 4 2022
+ * Date Last Updated          : June 4 2022
+ * Compilation                : javac RingBuffer.java
+ * Execution                  : java  RingBuffer
+ * Expected Location          : /RingBuffer.java
+ * 
+ * 
+ * Purpose: To act as a client to GuitarHero.
+ * 
+ * 
+ *****************************************************************************/
+
+
 public class GuitarHeroClient {
 
 
